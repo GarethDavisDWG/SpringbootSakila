@@ -1,17 +1,15 @@
-package com.tsi.alex.program;
+package com.tsi.davis.gareth.sakila.connect;
 
-import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 
 @Entity
-//@Repository
 @Table(name="actor")
 public class Actor {
 
     @Id
     @Column(name="actor_id")
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int actor_id;
 
     //Attributes

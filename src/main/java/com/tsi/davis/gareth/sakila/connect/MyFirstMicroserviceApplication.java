@@ -1,7 +1,6 @@
-package com.tsi.alex.program;
+package com.tsi.davis.gareth.sakila.connect;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins="*")
 @SpringBootApplication
 @RestController  //handles GET, POST, DELETE, PUT requests
-@RequestMapping("/Home")
+@RequestMapping("/Sakila")
 public class MyFirstMicroserviceApplication {
 
 	@Autowired
@@ -22,6 +21,8 @@ public class MyFirstMicroserviceApplication {
 	public MyFirstMicroserviceApplication(ActorRepository actorRepository){
 		this.actorRepository = actorRepository;
 	}
+
+
 	//@ResponseBody
 	@PostMapping("/Add_New_Actor")
 	public @ResponseBody String addNewActor(@RequestParam String first_name, @RequestParam String last_name){
